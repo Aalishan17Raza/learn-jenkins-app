@@ -20,5 +20,12 @@ pipeline {
                 '''
             }
         }
+
+        stage('build test') {
+            sh '''
+                [ -f /build/index.html ] && echo "file exists" || echo "file doesn't exist"
+                npm test 
+            '''
+        }
     }
 }
