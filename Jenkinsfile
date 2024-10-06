@@ -30,7 +30,7 @@ pipeline {
             }
             steps {
                 sh '''
-                    [ -f /build/index.html ] && echo "file exists" || echo "file doesn't exist"
+                    [ -f ./build/index.html ] && echo "file exists" || echo "file doesn't exist"
                     npm test 
                 '''
             }
